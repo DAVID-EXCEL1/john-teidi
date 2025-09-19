@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Home, User, Music, CalendarDays, Mail, Menu, X, Image as ImageIcon } from 'lucide-react'; // Renamed Image to ImageIcon
-
+import heroImg from "./assets/HomeJohn.jpg"
+import choir from "./assets/choir.jpg"
+import deep from "./assets/eep.jpg"
+import Hwcn from "./assets/Hwcn.jpg"
+import power from "./assets/power.jpg"
+import praise from "./assets/praise.jpg"
+import worship from "./assets/worship.jpg"
+import home from "./assets/HomenA.jpg"
 // Main App Component
 const App = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -117,7 +124,7 @@ const HomePage = () => (
     <section id="home-section" className="text-center py-16 bg-white rounded-lg shadow-xl mb-12"> {/* Light background */}
         <div className="max-w-4xl mx-auto">
             <img
-                src="https://scontent-los2-1.xx.fbcdn.net/v/t39.30808-6/480738758_647767134509678_1900972701709827214_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=hjJK82gFM4kQ7kNvwHRCdMj&_nc_oc=Adk_NfCisShc9QzwrgpFQUfGKSVfE6ZYptKtqkeg2kZ90B9zWzWq4A_qb_BZi6iawVc&_nc_zt=23&_nc_ht=scontent-los2-1.xx&_nc_gid=ZllHPQWM6HgT53E7RKk7VQ&oh=00_AfRr2xuDjPvT-N5QUjNJ3m-eG2JM2tsMzYEW6iv1uXJZHA&oe=6871FB40" // New image URL
+                src={home} // New image URL
                 alt="Minister's Portrait"
                 className="mx-auto rounded-full w-48 h-48 object-cover border-4 border-orange-600 shadow-lg mb-8"
                 onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/200x200/FF5722/FFFFFF?text=Error"; }}
@@ -147,7 +154,7 @@ const AboutPage = () => (
         <div className="flex flex-col md:flex-row items-center md:space-x-8">
             <div className="md:w-1/3 mb-8 md:mb-0">
                 <img
-                    src="https://scontent-los2-1.xx.fbcdn.net/v/t39.30808-6/484305713_647767091176349_6575656947516483849_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=szE0FmbB_50Q7kNvwEu53ni&_nc_oc=Adl13iaEqcgA7pXKB4l5BqqIXu3JwmP9yapWQMUkdeHzveXxUXmc-s6-Mg7IrxLKLpI&_nc_zt=23&_nc_ht=scontent-los2-1.xx&_nc_gid=ml9jbVD66KiTqmV476yaxg&oh=00_AfSGIQS3WIoglvLHYEO-2IqzVVp7tcVDWz_QYdT2U9dQXg&oe=68720F7B" // New image URL
+                    src={heroImg} // New image URL
                     alt="Minister's Bio Image"
                     className="rounded-lg shadow-lg w-full h-auto object-cover"
                     onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/400x400/FF5722/FFFFFF?text=Error"; }}
@@ -235,12 +242,12 @@ const MusicPage = () => {
 // Gallery Page Component
 const GalleryPage = () => {
     const galleryImages = [
-        { id: 1, src: "https://scontent-los2-1.xx.fbcdn.net/v/t39.30808-6/483098551_646246951328363_7131495317253284524_n.jpg?stp=c120.0.480.480a_dst-jpg_s206x206_tt6&_nc_cat=107&ccb=1-7&_nc_sid=50ad20&_nc_ohc=1k4UfEpBqwMQ7kNvwGd4T_4&_nc_oc=AdkbvymnlE0Cf3IGMxpOZ5m3CDLQ7n0G4LHq8USKAvS8ZWhgNsH1INzaAuRYL0zfyVs&_nc_zt=23&_nc_ht=scontent-los2-1.xx&_nc_gid=v5U7JVAnvwVOaupuHrxo2A&oh=00_AfQO9LWoilyzi_A69DPOJry6eLEccZadOb3jnE1nR4VBLw&oe=6871E0E2", alt: "Ministering at HWCN" },
-        { id: 2, src: "https://scontent-los2-1.xx.fbcdn.net/v/t39.30808-6/484074035_646716591281399_663238281748384893_n.jpg?stp=c0.59.720.720a_dst-jpg_s206x206_tt6&_nc_cat=103&ccb=1-7&_nc_sid=50ad20&_nc_ohc=GzFVLB9PGkgQ7kNvwHp8R49&_nc_oc=AdnoWdJEvAbiRfWTkRDvPvyejB8QsOqrO2FShM8an5U0DnL9huxSUmHVnSjDViAjykg&_nc_zt=23&_nc_ht=scontent-los2-1.xx&_nc_gid=qPzloadXIC3Vt6NfkT6BIg&oh=00_AfRTjG97sWunupBwT2bHCupDzZhT4iD9baEu6hTivVwHAQ&oe=6871E4E4", alt: "Worship Session" },
-        { id: 3, src: "https://scontent-los2-1.xx.fbcdn.net/v/t39.30808-6/482032342_645458171407241_815092345531941454_n.jpg?stp=c0.62.750.750a_dst-jpg_s206x206_tt6&_nc_cat=108&ccb=1-7&_nc_sid=50ad20&_nc_ohc=Ro91hCLT0vwQ7kNvwFzCZRl&_nc_oc=AdkvVnD3He55Q62QHg7S4AetMtnJW9W5-ZcIIp3SfTxhI2qeTCY2tuOnoXIvwEOBcIE&_nc_zt=23&_nc_ht=scontent-los2-1.xx&_nc_gid=4iO2HyYIOPSti1rBgzmv4Q&oh=00_AfRwI9-LysXr-7IptZany9zjJWK5N6tbOfylmm9SZL3m7w&oe=68721351", alt: "Choir Ministration" }, // Changed title
-        { id: 4, src: "https://scontent-los2-1.xx.fbcdn.net/v/t39.30808-6/482240374_643760344910357_3707680020852101622_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=105&ccb=1-7&_nc_sid=fe5ecc&_nc_ohc=dxXHW2oDdIoQ7kNvwE_tZ_b&_nc_oc=AdmFWDl7z93cvElX6IiCe4jIe6UXfqAzFdkl4sdAMORDvEW_Nn6RV_HlSeKa1x3oLnQ&_nc_zt=23&_nc_ht=scontent-los2-1.xx&_nc_gid=4iO2HyYIOPSti1rBgzmv4Q&oh=00_AfRLmAEJRhlU0z1nFpJ6PKEuN9Qk1yRvrMRDdV9dDJ-CsQ&oe=6871F942", alt: "Praise and Worship" },
-        { id: 5, src: "https://scontent-los2-1.xx.fbcdn.net/v/t39.30808-6/477719818_624593373493721_7247645019113075271_n.jpg?stp=c120.0.480.480a_dst-jpg_s206x206_tt6&_nc_cat=107&ccb=1-7&_nc_sid=fe5ecc&_nc_ohc=phMz66QvHl0Q7kNvwG3Jpvi&_nc_oc=AdklogO72njaBWYv1Nzt4LnoDbkFPS9hgjBJ17YmZ3DsNwfzs7nXNHEmqpjcyUwauFc&_nc_zt=23&_nc_ht=scontent-los2-1.xx&_nc_gid=YjYkDwwaVzaiIg4shTg_aw&oh=00_AfSK1NfQBP5Y01CvYVSD-R8a7vV_aJoeNjggj5J7ZHsgiw&oe=68720285", alt: "Deep Worship Moment" },
-        { id: 6, src: "https://scontent-los2-1.xx.fbcdn.net/v/t39.30808-6/475681652_614990161120709_1261318153052418567_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=105&ccb=1-7&_nc_sid=50ad20&_nc_ohc=JZ_4_i_v56MQ7kNvwG9xgRD&_nc_oc=AdneM5aXSjXjIgaofQB_zdvr9H6DozUl6bdJyqEYzJsbew5C1aIARfANsKvCZg9Etzk&_nc_zt=23&_nc_ht=scontent-los2-1.xx&_nc_gid=1rbP_tcDR6DfXK19mSGfTQ&oh=00_AfRwF3Z762JGaeHX3_wTPdMiQ_OYlUdMZnvX_KGROEZz6w&oe=6871E8E5", alt: "Powerful Ministration" }, // New card added
+        { id: 1, src: Hwcn, alt: "Ministering at HWCN" },
+        { id: 2, src: worship, alt: "Worship Session" },
+        { id: 3, src: choir, alt: "Choir Ministration" }, // Changed title
+        { id: 4, src: praise, alt: "Praise and Worship" },
+        { id: 5, src: deep, alt: "Deep Worship Moment" },
+        { id: 6, src: power, alt: "Powerful Ministration" }, // New card added
     ];
 
     return (
