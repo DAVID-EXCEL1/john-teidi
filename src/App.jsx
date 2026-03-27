@@ -92,6 +92,12 @@ const App = () => {
                     <a href="https://www.instagram.com/teidi_john/" className="text-orange-600 hover:text-orange-800 transition-colors duration-200">Instagram</a>
                     <a href="https://www.youtube.com/@HwcnGlobal" className="text-orange-600 hover:text-orange-800 transition-colors duration-200">YouTube</a>
                 </div>
+                <p className="mt-4 text-sm text-gray-500">
+                    Built by{' '}
+                    <a href="https://dext.vercel.app" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-800 transition-colors duration-200 font-medium">
+                        David Excel Technologies (DEXT)
+                    </a>
+                </p>
             </footer>
         </div>
     );
